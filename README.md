@@ -1,37 +1,32 @@
-# Task Manager
+# README
 
-## Framework
+TODO: FILE STRUCTURE CHANGE
 
-Electron
+├── App.css
+├── App.js
+├── App.test.js
+├── Components
+│   └── Navbar
+├── index.css
+├── index.js
+├── logo.svg
+├── reportWebVitals.js
+└── setupTests.js
 
-## Languages
+## Information
 
-1. Javascript
-2. SaSS
-3. Node.Js
-
-## Functionality
-
-1. Todo List
-
-### Database
-
-- [ ] Get it in a database
-- [ ] Sorted by date [ KeyID ]
-- [ ] Sort by priority [ KeyID ]
-
-### On the user interface
-
-- Priority 3 - Red
-- Priority 2 - Yellow
-- Priority 1 - Green
-
-### Middleware
-
-- [ ] Write API - { Parker }
-- [ ] Postman - { We will both set that up on our own systems }
-
-### Style and Theming
-1. **Look and Feel**: Modern / glassy
-
+1. **API:**
+    - Postman
+    - Electron API
+2. **Langauages Used:**
+    - Javascript
+    - SaSS
+    - HTML
+3. **Frameworks List:**
+    - Electron
+    - ReactJS
+4. **Style & Theming:**
+    - Components - Components Folder
+    - **Look & Feel:** - Glassy Modern
+    - **Features** - Light/Dark Mode
 

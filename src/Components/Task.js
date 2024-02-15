@@ -15,8 +15,10 @@ class Task extends Component {
 
   render() {
     return (
-      <div>
+      <div class="task">
+        <label>Name</label>
         <p>{this.state.name}</p>
+        <label>Priority</label>
         <p>{this.state.priority}</p>
         <p>Date</p>
 

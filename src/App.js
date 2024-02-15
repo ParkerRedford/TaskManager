@@ -2,6 +2,8 @@ import React, { Component, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Task from "./Components/Task";
+import Calendar from "./Components/Calendar";
+import "./Glass.css"
 
 class App extends Component {
   constructor(props) {
@@ -39,23 +41,14 @@ class App extends Component {
           <input type="submit"></input>
         </form>
 
+        {/* <Task name="parker" priority={3}></Task>
+        <Task name="andrew" priority={2}></Task>
         <Task name="parker" priority={3}></Task>
         <Task name="andrew" priority={2}></Task>
+        <Task name="parker" priority={3}></Task>
+        <Task name="andrew" priority={2}></Task> */}
 
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Calendar></Calendar>
       </div>
     );
   }

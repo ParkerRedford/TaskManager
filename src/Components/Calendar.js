@@ -1,4 +1,5 @@
-import React, { Component, useState } from "react";
+import React, { Component, useCallback, useState } from "react";
+import Day from "./Day";
 
 class Calendar extends Component {
   constructor(props) {
@@ -6,7 +7,8 @@ class Calendar extends Component {
     this.state = {
         month: -1,
         date: new Date(),
-        days: []
+        days: [],
+        selectedDay: -1
     };
   }
 
@@ -16,8 +18,16 @@ getDaysInMonth(year, month) {
 
   componentDidMount() {
     const today = new Date();
-    const d =this.getDaysInMonth(today.getFullYear(), today.getMonth());
-    this.setState({ date: today, days: new Array(d).fill((e, i) => i) });
+    const d = this.getDaysInMonth(today.getFullYear(), today.getMonth());
+    this.setState({ date: today, days: new Array(d).fill((e, i) => i), selectedDay: today.getDate() });
+  }
+
+  selectDay = (index, event) => {
+    this.setState({selectDay: index + 1});
+  }
+
+  changeDay = (i) => {
+    this.setState({selectedDay: i});
   }
 
   render() {
@@ -33,12 +43,8 @@ getDaysInMonth(year, month) {
         <p>Today's day: {this.state.date.getDate()}</p>
 
         <div className="days">
-          {this.state.days.map((e, i) => {
-            if(i !== this.state.date.getDate() - 1) {
-              return <h1 className="day">{i + 1}</h1>
-          } else {
-              return <h1 className="day" style={{backgroundColor: "red"}}>{i + 1}</h1>
-          }
+          {this.state.days.map((item, index) => {
+            return <Day numberOfDay={index} key={index} changeDay={this.changeDay} selectedDay={this.state.selectedDay}></Day>
           })}
         </div>
       </div>
